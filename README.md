@@ -1,2 +1,5 @@
-# html5-digitalers
-Todo el trabajo realizado en el curso html5 de Digitales-Telecom. Ejercicios, prácticas, laboratorios y pruebas de código.
+# javascript-digitalers
+
+Todo lo referido al curso **Javascript desde cero**  de *Digitalers-Telecom*
+
+Ejercicios, prácticas, laboratorios y pruebas de código.
