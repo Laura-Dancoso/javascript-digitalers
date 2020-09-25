@@ -1,26 +1,52 @@
-//entrada de datos
-var nombre =prompt("Nombre: ");
-var apellido =prompt("Apellido: ");
-var edad =prompt("Edad: ");
-//mensaje
-if ((nombre== null || apellido== null  || edad== null ) || (nombre ==="" || apellido ==="" || edad==="")){
-    var mensaje= "Sus datos son inválidos, refresque la página e intente nuevamente poniendo datos válidos."; 
+//1
+/*var num1= parseInt(prompt("Ingrese el primer número entero: "));
+var num2= parseInt(prompt("Ingrese el segundo número entero: "));
+var mensaje;
+if(isNaN(num1) || isNaN(num2)){
+    mensaje="Alguno de los dos datos ingresados no es un número. Por favor refresque la página y vuelva a ingresar correctamente los datos."
+}else if(num1>num2){
+   mensaje="El número mayor es " + num1; 
+}else if((num1==num2)){
+    mensaje= "No hay mayor, son iguales";
 }else{
-    var mensaje= "Su nombre es " + nombre +", su apellido es " + apellido + " y su edad es " + edad + ".";
+    mensaje="El número mayor es " + num2;
 }
-//salida de datos
 alert(mensaje);
-document.write(mensaje+"<br>");
-console.log(mensaje);
-//sumar números
-var numero1= parseInt(prompt("Ingrese un número: "));
-var numero2= parseInt(prompt("Ingrese otro número: "));
-
-var suma=numero1+numero2;
-var resta=numero1-numero2;
-var multiplicacion= numero1*numero2;
-var division= numero1/numero2;
-document.write("La suma de ambos números es " + suma +"<br>");
-document.write("La resta de ambos números es " + resta +"<br>");
-document.write("La multiplicación de ambos números es " + multiplicacion +"<br>");
-document.write("La división de ambos números es " + division+"<br>");
+//2
+var nota = parseInt(prompt("Ingrese la nota para saber la condición del alumno: "));
+if (isNaN(nota) || nota < 0 || nota > 10) {
+    console.log("Alguno de los dos datos ingresados no es un número o es un número negativo. Por favor refresque la página y vuelva a ingresar correctamente los datos.")
+} else if (nota >= 8) {
+    console.log("Promocionado");
+} else if (nota >= 6) {
+    console.log("Aprobado")
+} else {
+    console.log("Desaprobado");
+}
+//lab2
+switch(new Date().getDay()){
+    case 0:
+        alert("Domingo");
+        break;
+    case 1:
+        alert("Lunes");
+        break;
+    case 2:
+        alert("Martes");
+        break;
+    case 3:
+        alert("Miércoles");
+        break;
+    case 4:
+        alert("Jueves");
+        break;
+    case 5:
+        alert("Viernes");
+        break;
+    case 6:
+        alert("Sábado");
+        break;
+    default:
+        alert("Invalid day");
+        break;
+    }*/
