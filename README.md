@@ -4,4 +4,4 @@ Todo lo referido al curso **Javascript desde cero**  de *Digitalers-Telecom*
 
 Ejercicios, prácticas, laboratorios y pruebas de código.
 
-* Último lab de la última clase: https://laura-dancoso.github.io/javascript-digitalers/Web/index.html
+* Último lab de la última clase: https://laura-dancoso.github.io/javascript-digitalers/Web/index.html o https://lauradancoso.netlify.app/
