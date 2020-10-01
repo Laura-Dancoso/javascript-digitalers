@@ -1,20 +1,20 @@
 //*Laboratorio 4
 var semestre_1 = [1,2,3];
 var semestre_2 = [3,4,6];
-var total_ventas_anual = [semestre_1,semestre_2];
-var caramelos_ventas_anual=0;
-var alfajores_ventas_anual=0;
-var chocolates_ventas_anual=0;
+var ventas_anual = [semestre_1,semestre_2];
+var venta_anual_por_item=[];
 
-for(let i =0; i<total_ventas_anual.length; i++){
-    caramelos_ventas_anual += total_ventas_anual[i][0];
-    alfajores_ventas_anual += total_ventas_anual[i][1];
-    chocolates_ventas_anual += total_ventas_anual[i][2];
+for(let i =0; i<ventas_anual.length; i++){
+    if(i==0){
+        for(let e=0;e<ventas_anual[i].length;e++){
+            venta_anual_por_item.push(ventas_anual[i][e]);
+        }
+    }else{
+        for(let e=0;e<ventas_anual[i].length;e++){
+            venta_anual_por_item[e] += ventas_anual[i][e];
+        }
+    }
 }
-
-console.log("venta anual caramelos: " + caramelos_ventas_anual);
-console.log("venta anual alfajores: " + alfajores_ventas_anual);
-console.log("venta anual chocolates: " + chocolates_ventas_anual);
 var tabla = document.getElementById("ventas");
 tabla.innerHTML= createTable();
 
@@ -48,12 +48,12 @@ function createTHead(){
 function createTBody(){
     let html= "";
     html += '<tbody>'
-    for(let i =0; i<total_ventas_anual.length;i++){
+    for(let i =0; i<ventas_anual.length;i++){
         html += '<tr>'
         html += '<th>'
         html += 'Semestre' + (i+1)
         html += '</th>'
-        html += createTd(total_ventas_anual[i])
+        html += createTd(ventas_anual[i])
         html+= '</tr>'
     }
     html += '</tbody>'
@@ -65,7 +65,7 @@ function createTAnual(){
         html += '<th>'
         html += 'Anual'
         html += '</th>'
-        html += createTd([caramelos_ventas_anual,alfajores_ventas_anual,chocolates_ventas_anual])
+        html += createTd(venta_anual_por_item)
         html+= '</tr>'
     return html;
 }
