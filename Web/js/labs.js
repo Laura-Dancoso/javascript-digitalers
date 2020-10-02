@@ -41,7 +41,7 @@ function resultados() {
     return 'Datos no válidos'
   }
 }
-//console.log(resultados());
+console.log(resultados());
 
 //*Laboratorio 2
 function changeColor(element,change){
