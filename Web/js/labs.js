@@ -41,21 +41,17 @@ function resultados() {
     return 'Datos no válidos'
   }
 }
-console.log(resultados());
+//console.log(resultados());
 
 //*Laboratorio 2
-var textButtons = document.getElementsByClassName('text');
-for(let i =0; i<textButtons.length;i++){
-  textButtons[i].addEventListener('click', function(){
-    document.getElementById('text').style.color=textButtons[i].dataset.color;
-  })
+function changeColor(element,change){
+  var buttons = document.getElementsByClassName(element);
+  for(let i = 0; i<buttons.length;i++){
+    buttons[i].addEventListener('click', function(){
+      (element==='text') ? document.getElementById(element).style.color=buttons[i].dataset.color : document.getElementById(element).style.background=buttons[i].dataset.color;
+      document.getElementById(element).innerHTML= "Click en los botones para cambiar el color" + change +" de este texto." +'</br>' +"Color elegido:" + buttons[i].dataset.color;
+    });
+  }
 }
-var boxButtons = document.getElementsByClassName('box');
-for(let i =0; i<boxButtons.length;i++){
-  boxButtons[i].addEventListener('click', function(){
-    document.getElementById('box').style.background=boxButtons[i].dataset.color;
-  })
-}
-
-
-//.dataset.color
+changeColor('text',"");
+changeColor('box', " de fondo");
