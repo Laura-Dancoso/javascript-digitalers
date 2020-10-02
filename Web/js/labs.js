@@ -24,10 +24,10 @@ function resultados() {
   var a = prompt("Ingrese un número");
   var b = prompt("Ingrese otro número");
   var resultado = "";
-  var op = [sumar(a, b), restar(a, b), multiplicar(a, b), dividir(a, b)];
   if ((a != null && a != "") && (b != null && b != "")) {
     a = parseInt(a);
     b = parseInt(b);
+    var op = [sumar(a, b), restar(a, b), multiplicar(a, b), dividir(a, b)];
     for (let i = 0; i < op.length; i++) {
       if (op[i] != "error") {
         ""
