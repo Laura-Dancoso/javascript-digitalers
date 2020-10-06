@@ -44,14 +44,13 @@ function resultados() {
 console.log(resultados());
 
 //*Laboratorio 2
-function changeColor(element,change){
+function changeColor(element){
   var buttons = document.getElementsByClassName(element);
   for(let i = 0; i<buttons.length;i++){
     buttons[i].addEventListener('click', function(){
-      (element==='text') ? document.getElementById(element).style.color=buttons[i].dataset.color : document.getElementById(element).style.background=buttons[i].dataset.color;
-      document.getElementById(element).innerHTML= "Click en los botones para cambiar el color" + change +" de este texto." +'</br>' +"Color elegido:" + buttons[i].dataset.color;
+      document.getElementById(element).style.background=buttons[i].innerHTML.toLowerCase();
+      document.getElementById(element).innerHTML= "Color elegido:" + buttons[i].innerHTML.toLowerCase();
     });
   }
 }
-changeColor('text',"");
-changeColor('box', " de fondo");
+changeColor('text');
